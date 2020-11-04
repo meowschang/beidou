@@ -43,9 +43,6 @@
     <!-- / FB Open Graph -->
 
 </head>
-
-<body class="page-body">
-    <!-- skin-white -->
     <div class="page-container">
         <div class="sidebar-menu toggle-others fixed">
             <div class="sidebar-menu-inner">
@@ -160,9 +157,34 @@
                         </ul>
                     </li>
                 </ul>
+
+                <ul class="user-info-menu right-links list-inline list-unstyled">
+                    <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span> <script language="javascript"> 
+                        var now = new Date();                     
+                        function createtime(){                     
+                         var grt= new Date("11/01/2020 00:00:00");/*---这里是网站的启用时间--*/                     
+                         now.setTime(now.getTime()+250);                     
+                         days = (now - grt ) / 1000 / 60 / 60 / 24;                      
+                         dnum = Math.floor(days);                     
+                         hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum);                     
+                         hnum = Math.floor(hours);                    
+                         if(String(hnum).length ==1 ){hnum = "0" + hnum;}                     
+                         minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);                      
+                         mnum = Math.floor(minutes);                      
+                         if(String(mnum).length ==1 ){mnum = "0" + mnum;}                     
+                         seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);                      
+                         snum = Math.round(seconds);                       
+                         if(String(snum).length ==1 ){snum = "0" + snum;}                       
+                         document.getElementById("timeDate").innerHTML = "本站已稳定运行"+dnum+"天";                      
+                         document.getElementById("times").innerHTML = hnum + "小时" + mnum + "分" + snum + "秒";                       
+                        }                    
+                        setInterval("createtime()",250); 
+                       </script>
+                </ul>
+
                 <ul class="user-info-menu right-links list-inline list-unstyled">
                     <li class="hidden-sm hidden-xs">
-                        <a href="https://github.com/WebStackPage/WebStackPage.github.io" target="_blank">
+                        <a href="https://github.com/meowschang" target="_blank">
                             <i class="fa-github"></i> GitHub
                         </a>
                     </li>
@@ -192,6 +214,8 @@
                     </div>
                 </div>
             </div>
+
+
 
             <div class="col-sm-3">
                 <div class="xe-widget xe-conversations box2 label-info"
@@ -329,8 +353,10 @@
             <!-- END 常用网站 -->
 
             <!-- 云技术 -->
-            <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="界面灵感"></i>云技术</h4>
+            <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="界面灵感"></i>软件开发</h4>
             <div class="row">
+
+
 
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
@@ -391,139 +417,138 @@
             <br />
 
             <!-- 二、常用工具 -->
-                        <!-- 在线工具 -->
-                        <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="在线工具"></i>在线工具</h4>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <div class="xe-widget xe-conversations box2 label-info"
-                                    onclick="window.open('https://www.processon.com/', '_blank')" data-toggle="tooltip"
-                                    data-placement="bottom" title="" data-original-title="https://www.processon.com/">
-                                    <div class="xe-comment-entry">
-                                        <a class="xe-user-img">
-                                            <img data-src="../assets/images/logos/tinypng.png" class="lozad img-circle" width="40">
-                                        </a>
-                                        <div class="xe-comment">
-                                            <a href="#" class="xe-user-name overflowClip_1">
-                                                <strong>Process On</strong>
-                                            </a>
-                                            <p class="overflowClip_2">Process On</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-3">
-                                <div class="xe-widget xe-conversations box2 label-info"
-                                    onclick="window.open('http://www.uugai.com/', '_blank')" data-toggle="tooltip" data-placement="bottom"
-                                    title="" data-original-title="http://www.uugai.com/">
-                                    <div class="xe-comment-entry">
-                                        <a class="xe-user-img">
-                                            <img data-src="../assets/images/logos/goqr.png" class="lozad img-circle" width="40">
-                                        </a>
-                                        <div class="xe-comment">
-                                            <a href="#" class="xe-user-name overflowClip_1">
-                                                <strong>Logo在线制作</strong>
-                                            </a>
-                                            <p class="overflowClip_2">免费的LOGO在线设计制作工具</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-3">
-                                <div class="xe-widget xe-conversations box2 label-info"
-                                    onclick="window.open('https://ezgif.com', '_blank')" data-toggle="tooltip"
-                                    data-placement="bottom" title="" data-original-title="https://ezgif.com">
-                                    <div class="xe-comment-entry">
-                                        <a class="xe-user-img">
-                                            <img data-src="../assets/images/logos/ezgif.png" class="lozad img-circle" width="40">
-                                        </a>
-                                        <div class="xe-comment">
-                                            <a href="#" class="xe-user-name overflowClip_1">
-                                                <strong>ezgif</strong>
-                                            </a>
-                                            <p class="overflowClip_2">simple online GIF maker and toolset for basic animated GIF
-                                                editing.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="xe-widget xe-conversations box2 label-info"
-                                    onclick="window.open('http://inloop.github.io/shadow4android/', '_blank')" data-toggle="tooltip"
-                                    data-placement="bottom" title="" data-original-title="http://inloop.github.io/shadow4android/">
-                                    <div class="xe-comment-entry">
-                                        <a class="xe-user-img">
-                                            <img data-src="../assets/images/logos/Android9patch.png" class="lozad img-circle"
-                                                width="40">
-                                        </a>
-                                        <div class="xe-comment">
-                                            <a href="#" class="xe-user-name overflowClip_1">
-                                                <strong>Android 9 patch</strong>
-                                            </a>
-                                            <p class="overflowClip_2">Android 9-patch shadow generator fully customizable shadows
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+            <!-- 在线工具 -->
+            <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="在线工具"></i>在线工具</h4>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info"
+                        onclick="window.open('https://www.processon.com/', '_blank')" data-toggle="tooltip"
+                        data-placement="bottom" title="" data-original-title="https://www.processon.com/">
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="../assets/images/logos/tinypng.png" class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>Process On</strong>
+                                </a>
+                                <p class="overflowClip_2">Process On</p>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <div class="xe-widget xe-conversations box2 label-info"
-                                    onclick="window.open('http://screensiz.es/', '_blank')" data-toggle="tooltip"
-                                    data-placement="bottom" title="" data-original-title="http://screensiz.es/">
-                                    <div class="xe-comment-entry">
-                                        <a class="xe-user-img">
-                                            <img data-src="../assets/images/logos/screensizes.png" class="lozad img-circle"
-                                                width="40">
-                                        </a>
-                                        <div class="xe-comment">
-                                            <a href="#" class="xe-user-name overflowClip_1">
-                                                <strong>screen sizes</strong>
-                                            </a>
-                                            <p class="overflowClip_2">Viewport Sizes and Pixel Densities for Popular Devices</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="xe-widget xe-conversations box2 label-info"
-                                    onclick="window.open('https://jakearchibald.github.io/svgomg/', '_blank')" data-toggle="tooltip"
-                                    data-placement="bottom" title="" data-original-title="https://jakearchibald.github.io/svgomg/">
-                                    <div class="xe-comment-entry">
-                                        <a class="xe-user-img">
-                                            <img data-src="../assets/images/logos/svgomg.png" class="lozad img-circle" width="40">
-                                        </a>
-                                        <div class="xe-comment">
-                                            <a href="#" class="xe-user-name overflowClip_1">
-                                                <strong>svgomg</strong>
-                                            </a>
-                                            <p class="overflowClip_2">SVG在线压缩平台</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="xe-widget xe-conversations box2 label-info"
-                                    onclick="window.open('https://www.gaoding.com', '_blank')" data-toggle="tooltip"
-                                    data-placement="bottom" title="" data-original-title="https://www.gaoding.com">
-                                    <div class="xe-comment-entry">
-                                        <a class="xe-user-img">
-                                            <img data-src="../assets/images/logos/gaoding.png" class="lozad img-circle" width="40">
-                                        </a>
-                                        <div class="xe-comment">
-                                            <a href="#" class="xe-user-name overflowClip_1">
-                                                <strong>稿定抠图</strong>
-                                            </a>
-                                            <p class="overflowClip_2">免费在线抠图软件,图片快速换背景-抠白底图</p>
-                                        </div>
-                                    </div>
-                                </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info"
+                        onclick="window.open('http://www.uugai.com/', '_blank')" data-toggle="tooltip"
+                        data-placement="bottom" title="" data-original-title="http://www.uugai.com/">
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="../assets/images/logos/goqr.png" class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>Logo在线制作</strong>
+                                </a>
+                                <p class="overflowClip_2">免费的LOGO在线设计制作工具</p>
                             </div>
                         </div>
-                        <br />
-                        <!--END 在线工具 -->
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info"
+                        onclick="window.open('http://note.youdao.com/', '_blank')" data-toggle="tooltip"
+                        data-placement="bottom" title="" data-original-title="http://note.youdao.com/">
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="../assets/images/logos/ezgif.png" class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>有道云笔记</strong>
+                                </a>
+                                <p class="overflowClip_2">方便快捷的在线笔记工具</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info"
+                        onclick="window.open('http://inloop.github.io/shadow4android/', '_blank')" data-toggle="tooltip"
+                        data-placement="bottom" title="" data-original-title="http://inloop.github.io/shadow4android/">
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="../assets/images/logos/Android9patch.png" class="lozad img-circle"
+                                    width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>Android 9 patch</strong>
+                                </a>
+                                <p class="overflowClip_2">Android 9-patch shadow generator fully customizable shadows
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info"
+                        onclick="window.open('http://screensiz.es/', '_blank')" data-toggle="tooltip"
+                        data-placement="bottom" title="" data-original-title="http://screensiz.es/">
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="../assets/images/logos/screensizes.png" class="lozad img-circle"
+                                    width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>screen sizes</strong>
+                                </a>
+                                <p class="overflowClip_2">Viewport Sizes and Pixel Densities for Popular Devices</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info"
+                        onclick="window.open('https://jakearchibald.github.io/svgomg/', '_blank')" data-toggle="tooltip"
+                        data-placement="bottom" title="" data-original-title="https://jakearchibald.github.io/svgomg/">
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="../assets/images/logos/svgomg.png" class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>svgomg</strong>
+                                </a>
+                                <p class="overflowClip_2">SVG在线压缩平台</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info"
+                        onclick="window.open('https://www.gaoding.com', '_blank')" data-toggle="tooltip"
+                        data-placement="bottom" title="" data-original-title="https://www.gaoding.com">
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="../assets/images/logos/gaoding.png" class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong>稿定抠图</strong>
+                                </a>
+                                <p class="overflowClip_2">免费在线抠图软件,图片快速换背景-抠白底图</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <!--END 在线工具 -->
 
             <!-- 图形创意 -->
             <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="图形创意"></i>图形创意</h4>
